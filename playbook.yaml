@@ -1,0 +1,32 @@
+- hosts: demo
+  gather_facts: False
+
+  vars:
+   - MyMessage: "HAPPY NEW YEAR 2022"
+
+  pre_tasks:
+   - name: install python 2
+     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+
+  tasks:
+   - name: Ensure epel repo present
+     yum:
+       name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+       state: present
+  
+     become: true
+
+
+   - name: Install EPEL repo
+     yum: name=epel-release state=present
+
+   - name: Nginx setup
+     yum: name=nginx state=present
+     become: yes
+   - name: index.html copy
+     template: src=index.html.j2 dest=/usr/share/nginx/html/index.html
+     become: yes
+   - name: start the nginx service
+     systemd: name=nginx state=started enabled=yes
+     become: yes
+
