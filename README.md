@@ -10,16 +10,9 @@ In this project, we want to set a web server on a remote machine. Then install a
 This project will help you with these job requirements :
 
 
-- 
-Provision and configure infrastructure through automation
-
-
-- 
-Required experience in Scripting Tools (eg PowerShell, Batch, etc)
-
-
-- 
-Understanding of web application development, server deployment and upkeep, and general networking practices.
+- Provision and configure infrastructure through automation
+- Required experience in Scripting Tools (eg PowerShell, Batch, etc)
+- Understanding of web application development, server deployment and upkeep, and general networking practices.
 
 #### NEXT STEPS
 
