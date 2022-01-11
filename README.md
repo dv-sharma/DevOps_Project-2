@@ -1,4 +1,4 @@
-# Deploying remote Nginx Server which hosts a static HTML website on Amazon Linux (EC2) using Automation (Ansible)
+# Deploying remote Nginx Server which hosts a static HTML website on AWS Linux (EC2) using Automation (Ansible)
 ### DESCRIPTION
 
 #### PROJECT IDEA
